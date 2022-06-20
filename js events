@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html></html>
+  <body>
+    <p id="demo"></p>
+    <p>this button creates the opportunity</p>
+
+    <button onclick="displayDate()">paperfly</button>
+    <script>
+      function displayDate(){
+      document.getElementById("demo").innerHTML = Date();
+      }
+    </script>
+  </body>
+</html>

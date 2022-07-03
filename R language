@@ -1,3 +1,15 @@
 var1<- 10
 var2 <-20
 cat(var1, "\n", var2)
+
+var1<- "wild"
+
+cat(var1, "\n", var2)
+
+var1<-as.integer(var1) 
+
+typeof(var1)
+logi<- TRUE
+class(logi)
+com<-25 + 33i
+class (com)

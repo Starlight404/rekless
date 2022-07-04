@@ -1,0 +1,49 @@
+a<-100
+b<-2
+
+print(a+b)
+print(a-b)
+
+print(a*b)
+
+print(a/b)
+
+print(a%%b)
+print(a%/%b)
+
+print( a ^ b)
+
+#relational operators
+a<-100
+b<-100
+
+print(a>b)
+print(a<b)
+
+print(a==b)
+
+print(b>=a)
+
+print(a<=b)
+print(a!=b)
+
+print( a ^ b)
+
+#Vector operaors
+
+#vector is a collection of similar data types
+
+c1<-c(10,20,30)
+c2<-c(5,7,9)
+c3<-c(15,16,17)
+
+
+print(c1+c2+c3)
+print(c1-c2+c3)
+
+print(c1*c2-c3)
+
+print(c1/c2)
+
+print(c1%%c2)#remainder
+print(c1%/%c2)#quotient

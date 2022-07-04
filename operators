@@ -47,3 +47,7 @@ print(c1/c2)
 
 print(c1%%c2)#remainder
 print(c1%/%c2)#quotient
+
+d<-c(5,FALSE, 5+5i)
+e<-c(4,TRUE, 6-5i)
+print(d&e)

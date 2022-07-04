@@ -1,0 +1,37 @@
+#if else function
+
+x<-5L
+
+
+if(is.integer(x)){
+  
+  print("x is an integer")
+}else
+{
+  print("x is an asshole")
+  
+}
+
+y<- c("ford", "BMW", "TATA","Ferrari")
+if("Ferrari"%in%y){
+  print("Ferrari and Ford is found")
+}else{
+  print("not finding anything")
+}
+
+
+
+marks<- 100
+
+if(marks>94){
+  print("1st class")
+}else if(marks>80){
+  print("2nd class")
+  
+}else if(marks>60){
+  print("3rd class")
+}else{
+  print("fail")
+  
+}
+

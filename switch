@@ -1,0 +1,37 @@
+#switch(expression.case1, case2. case 3)
+
+#index value case
+x<- switch(3,
+           "rahul",
+           "ratul",
+           "brothers",
+           "for life"
+           )
+print(x)
+#matiching value case
+y<-"50"
+z<-switch (y,
+  "50" = "hate",
+  "75" = "trust",
+  "90" = "dedicated",
+  "100" = "lust"
+  
+)
+
+print(z)
+
+#practice
+# if no element is used then the first element is considered
+
+
+
+
+y<- c("ford")
+
+q<-switch(y,
+          "ford" = "50 + 50",
+          "BMW" = "60", 
+          "TATA" = "70"
+          
+          )
+print(q)

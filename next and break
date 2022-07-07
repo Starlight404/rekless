@@ -1,0 +1,22 @@
+#next function which skips the cureent function but the loops is continuous
+
+
+x<- 1 : 100
+
+for (var1 in x){
+  if(var1 == 5){
+    next
+  }
+    print(var1)
+  
+}
+#break states as a exit loop keyword which exists from the fiunction immidiately
+
+a<- 1;
+
+repeat{
+  print("i am alive")
+  if(a> 10)
+    break
+  a<- a+2
+}

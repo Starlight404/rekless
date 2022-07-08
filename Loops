@@ -1,0 +1,40 @@
+#for loop in R
+p<-"100"
+
+q<-switch (p,
+           "75" = "100",
+           "100" = for (y in 1:100){
+             print(paste("number :  " , y))#[string concatination or merge]
+           }
+)
+f<-c("ford", "bmw", "ferari", "tata", "mercedes")
+for (i in f){
+  print(f)
+}
+
+
+#Repeat loop
+
+v<-c("audi", "A8L","is ", "the best")
+x<-1
+repeat{
+  print(v)
+  x<-x+1
+  if(x>5){
+  break  
+  }
+
+}
+
+
+#while lopp
+
+
+v<-c("hello ", "people", "good ", "to ", "see you")
+x<-2
+while(x<6){
+  
+  print(v)
+  x<-x+1
+}
+

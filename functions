@@ -1,0 +1,59 @@
+# Functions in R language
+ 
+new.function<- function(){
+  name<- readline(prompt = "please enter your name:    ")
+  age<- readline(prompt = "enter your age :    ")
+  print(paste("my name is : ", name, "my age is : ", age, sep = ""))
+}
+
+new.function()
+
+nw.function<- function(){
+  v<-c("hello ", "people", "good ", "to ", "see you")
+  x<-1
+  while(x<=6){
+    
+    print(v)
+    x<-x+2
+  }
+  
+}
+nw.function()
+
+n.fun<- function(){
+  
+  v<- c(1:5)
+  for (i in v) {
+    print(i^3)
+    if(i^3<= 30){
+      print("hello")
+    }
+    
+    
+  }
+}
+n.fun()
+
+
+
+
+
+new.function<- function(x,y,z){
+  result<- x+y+z
+  print(result)
+  
+  }  
+
+new.function(200,44,45)
+
+
+
+
+
+new.function<- function(x=50, y=30, z =80){#intializing arguments
+  result<- x*y*z
+  print(result)
+  
+}
+
+new.function(555,55,5)#when we pass the argument value it automatically updates the value

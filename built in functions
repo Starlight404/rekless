@@ -1,0 +1,48 @@
+#r built in functions which are in use
+
+#abs value
+
+x<48
+
+print(abs(x))
+
+
+
+print(sqrt(225))
+
+x<- 5.5
+print(floor(x ))#value down 
+print(ceiling(x))#value up
+
+x<-c(1.5,5.6,7.8)
+
+print(trunc(x))#trunc () function in R Language is used to return the largest integer
+#that is smaller than or equal to x (i.e : rounds downs the nearest integer).
+#trunc () function behaves as a ceiling function 
+#for negative number and floor function for positive number.
+
+x<-90
+
+print(cos(x))
+print(log(x))
+print(exp(x))
+
+# string related function
+
+s<-"123456789asdfghjkkll10;"
+
+substr(s,6,10)
+
+
+print(toupper(s))
+
+
+s<-c ('ford bmw', 'bmw tata', 'tata audi')
+pat<- '^tata'
+print( grep(pat,s))# string search function
+
+
+a<-c(1:200, 220,250,43)
+
+s<-sum(a)
+print(s)

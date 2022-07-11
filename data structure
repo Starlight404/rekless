@@ -1,0 +1,68 @@
+#data structure in langauge in R
+
+vectors 
+matrix
+array
+list
+#data frame
+#vector is a sequence of elements which shares the same data types which supports almost all type of data types 
+# all the elements are known as components
+#length()finds the number of elements on a vector
+# atomic vector $ list vector
+a<-c(1,5,1,88,14,51,5)
+a
+b<- 55: 500
+b
+d<-seq(1,4, length.out = 5)
+d
+
+d[1]
+
+# 4 types atomic vectors
+
+#numeric vector
+
+
+numv<- c(12.5500,5.666,6045.22,2.555)
+
+class(numv)
+
+intv<-c(11L,15L,16L)
+#intv<-as.integer(intv)
+class(intv)
+
+
+#character vector
+
+v<- c(1,555,84, "rahul")
+v<-as.character(v)
+class(v)
+v[3]
+
+#logical vectors refers only true or false
+
+#accessing elements of vector
+#by indexing[] starts with 1 where as 0 in  C but not in R
+
+a<- c("ruhul"=8,"kuddus"=20,"nike"=30)
+a[c(TRUE,FALSE,TRUE)]
+
+#vector operations
+numv<- c(12.5500,5.666,6045.22,2.555)#combining vectors
+a<- c("ruhul"=8,"kuddus"=20,"nike"=30)
+
+a1<-c(numv,a)
+a1
+
+a2<-c("tata","ford","bmw","mercedes")
+a2[-2]#this negative number reprsents absoulute value and it returns other values except the absolute value
+a2[1:3]
+a2[c(2,4)]
+#naming of vector
+
+
+a2<-c("tata","ford","bmw","mercedes")
+names(a2) = c("x1","x2","x3","x4")
+a2
+a2["x2"]
+

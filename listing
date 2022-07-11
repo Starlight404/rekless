@@ -1,0 +1,36 @@
+#list is to contain different type of elements in one memory
+#l,ists vector in R
+a<- c(11,66,55,565,77)
+b<- c("ford","ferari","bmw", "toyota")
+c<- c(TRUE,TRUE,FALSE,FALSE,TRUE)
+
+list1<-list(a,b,c)
+list1
+
+list2<- list("ford", "ferari",list(c(1,55,88)) , 85L,98.66,TRUE,FALSE)
+
+list2
+
+list3<- list (c("bmw", "audi", "mercedes"), c(2001,2002,2003),c("white", "black", "blue"), list("50k","90k","100k"))
+list3
+
+names(list3)<- c("brand", "manufacture year", "color", "price")
+list3
+#accessesing the list
+
+
+print(list3[4])
+print(list3$price)
+
+#unlist function converts lists into vector
+
+l1<- list(11,55,550,47)
+v1<- unlist(l1)
+l2<-list(14,17,19,24)
+
+v2<- unlist(l2)
+res<- v1+ v2
+res
+
+mer<-list(l1,l2)#for merging the list 
+mer

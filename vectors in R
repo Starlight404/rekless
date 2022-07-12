@@ -1,0 +1,26 @@
+# creating vector
+
+
+rep()#for replicating sequences in r vector
+
+
+rep(c("i love coding"), time= 5)
+
+rep(c(1,5,10,15),each = 3)# replictes each arguments
+rep(c("ford", "ferari"), time = c(3,4))# here every element is set indivually to 
+#repeat
+rep(c(15:20), length.out = 12)
+
+#sequence functiomn
+
+seq(from = 1, to = 10, by = .01)
+seq(from = 0.1 , to = 2.75, length.out = 8)
+
+
+#difference between any and all function
+
+x<- 1:20
+any(x>15)# any number can be true if it its initialized
+
+all(x>0)# all condition has to be true
+

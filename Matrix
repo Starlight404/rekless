@@ -1,1 +1,12 @@
+#matrix in r language
+#matrix is a properly 2dimensional dataset
+# all the elements are arranged in a row and coloumn
+
+# R matrix(data (input= vector),nrow, ncol,byrow,dim_name){syntax of matrix}
+#if the element is false then coloumn wise and if the element is true then 
+# it will be row wise . this is what byrow stands for [a boolean]
+
+mat<-matrix(c(1:12),nrow = 4,byrow = TRUE)
+mat
+
 

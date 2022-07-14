@@ -6,7 +6,38 @@
 #if the element is false then coloumn wise and if the element is true then 
 # it will be row wise . this is what byrow stands for [a boolean]
 
-mat<-matrix(c(1:12),nrow = 4,byrow = TRUE)
+#mat<-matrix(c(1:15),nrow = 4,byrow = TRUE)
+#mat
+mat1<-matrix(c(2,4,6,8,10,12,14,16,18), nrow = 3, ncol =3,byrow = TRUE)#by row arrangement
+
 mat
+
+
+mat2<-matrix(c(2,4,6,8,10,12,14,16,18),nrow = 3, ncol = 3, byrow = FALSE,)#by coloumn arrangement
+mat2
+
+x<-matrix(c(1:12),nrow = 4,byrow = TRUE)
+y<-matrix(c(7:18),nrow = 4,byrow = FALSE)
+
+row_name<- c("r1","r2","r3","r4")
+col_name<-c("c1","c2","c3")
+
+z<-matrix(c(7:18), nrow = 4, byrow=TRUE, dimnames = list(row_name,col_name))
+z
+print(z[3,1])#3rd row 1st coloumn
+print(z[4,])
+
+print(z[,2])#elements of matrix
+
+z[3,1]<- 100 #modifying the values
+
+z[4,3]<- 500
+
+z[z==500]<-1000# value update using relational operator
+
+z
+
+
+
 
 

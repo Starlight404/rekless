@@ -1,0 +1,58 @@
+#data Frame
+
+# A data frame is an array, unlike an array
+#the data we store in the coloumn of the data frame can
+#be of various types
+
+
+# A data frame is a two diemnstional array like structure or
+# a table in which a coulumn contains values of one varriable
+#and rows contains a one set of values from each coloumn
+#a data frame is a special case of the list in which each 
+#component has equal length
+
+#frame()
+
+#lets create a data frame
+
+emp.data<-data.frame(
+  emp_id = c(1:5),
+  emp_name = c("rahul","rakesh","mimon","turzo","muja vhai"),
+  emp_salary = c(500,450,400,350,300),
+  start_date = as.Date(c("2012-01-01","2015-01-01","2017-01-01","2018-01-01",
+                          "2022-01-01")),
+  stringsAsFactors = FALSE
+  
+)
+
+print(emp.data)
+#its not possible in array
+str(emp.data)
+
+
+#how to extract data
+
+a<- data.frame(emp.data$emp_name,emp.data$emp_salary)
+#column extraaction
+a
+
+
+#row extraction
+a1<-emp.data[1:3,]
+a1#for range
+a3<-emp.data[c(2,3),c(1,3)]
+a3
+#modifying the data
+#c bind(), Rbind()
+
+x<-list(6,"ratul",250,"2021-06-14")
+x
+rbind(emp.data,x)
+
+y<- c("khulna","dhaka","feni", "kurigram", "nepal")
+cbind(emp.data, location = y)
+
+#emp.data<-emp.data[-2,] for deleting the rows
+#emp.data$emp_salary<-NULL -- for column delte
+
+print(summary(emp.data))

@@ -1,0 +1,65 @@
+#categorial variables
+#A catergorial variables or discrete variable is one that has two or more 
+#categories(values)
+#2 types--Nominal and ordinal
+# A nominal value is that has no ordering value(nam matro)
+#example --- gender---(male,female)--no ordering values
+#ordinal values--it is a value that has a clear ordering---
+#like as temparature---(low,medium,high)
+# R factor is used to store categorial data as levels. It can
+#store both character and integer types of data. Thesr factors are
+#created with the help of factor() functions, by taking vector as 
+# a input
+#factors have labels which are associated with the unique integers stored in it. 
+#it contains predefined set value known as levels and by dafault
+#R always sort levels in alphabitical orders
+
+#Attributes in R
+#X---it is the input vector which is to be transformed into a factor
+#levels---it is an input vector that represents a set of unique values are taken
+#by x
+
+#labels---it is a chracter vector which corresponds to the number of labels
+#exclude---it is used to specify the value which we want to be excluded
+#ordered----it is a logical attribute which determines if the levels are ordered
+#nmax---it is used to specify the upper bound for the maximun number of level
+
+
+
+
+
+dir<-c("north","south","east","north")
+is.factor(dir)
+factor(dir)#---in order
+#levels are unique thats why its not repating
+
+factor(dir,levels = c("north","west","east","south"),labels = c("N","W","E","S"))
+factor(dir,levels = c("north","west","east","south"),exclude = "north")
+
+#gl()---generate labels ---3 variables-- n,k,labels
+#n is the integer given number of lables
+#k is the integer giving number of replicants
+
+v1<- gl(3,4, labels = c("tata","honda", "bmw"))# n--number of levels, k--how many copies will it print
+
+#accessing the components of factors
+com<- c("bmw", "audi", "ferari")
+data<- factor(com)
+data[1]
+
+quote<- gl(1,1000, labels = c("money can buy happniess"))
+quote
+
+
+
+
+
+
+
+
+
+
+
+
+
+

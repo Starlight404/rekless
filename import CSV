@@ -26,3 +26,22 @@ sales
 print(is.data.frame(sales))
 
 print(nrow(sales))
+
+
+sales2<- read.table("wholesale-trade-survey-mar-2022-quarter-csv.csv", header = TRUE , sep = ",")
+sales2
+View(sales2)
+str(sales2)
+summary(sales2)#--provides the summery  statistics on the columns of the data frame  
+#RETURNS MEAN MEDIAN MODE VALUES
+names(sales2)#shows all the variables
+length(sales2)#shows the coloumn of the files
+nrow(sales2)
+ncol(sales2)
+
+dim(sales2) #row and column(dimensiton of the data frame by)
+colnames(sales2)#shows each column name
+head(sales2)#shows the first 6 rows of the data frame
+tail(sales2)#shows the last 6 rows of the data frame
+
+

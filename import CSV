@@ -1,0 +1,28 @@
+## data importing csv  --fromat--comma separated values
+
+#how to import csv files
+#getwd()---function represents the current directory
+
+getwd()
+#setwd----- custom directory
+setwd("C:\\Users\\Rahul\\Desktop\\R lang\\import csv")
+
+a<-c(12,34,56,32,35,98,33,57,14,59,13,21)#--ascending
+sort(a)
+sort(a, decreasing = TRUE)#descending
+
+order(a)
+a[order(a)]
+a
+rank(a)#indexing
+a[rank(a)]
+
+
+#stores<- read.csv(file.choose())
+#stores
+
+sales<- read.csv("wholesale-trade-survey-mar-2022-quarter-csv.csv")
+sales
+print(is.data.frame(sales))
+
+print(nrow(sales))

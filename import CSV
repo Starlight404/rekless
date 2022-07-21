@@ -21,14 +21,14 @@ a[rank(a)]
 #stores<- read.csv(file.choose())
 #stores
 
-sales<- read.csv("wholesale-trade-survey-mar-2022-quarter-csv.csv")
+sales<- read.csv("sample.csv")
 sales
 print(is.data.frame(sales))
 
 print(nrow(sales))
 
 
-sales2<- read.table("wholesale-trade-survey-mar-2022-quarter-csv.csv", header = TRUE , sep = ",")
+sales2<- read.table("sample.csv", header = TRUE , sep = ",")
 sales2
 View(sales2)
 str(sales2)
@@ -44,7 +44,7 @@ colnames(sales2)#shows each column name
 head(sales2)#shows the first 6 rows of the data frame
 tail(sales2)#shows the last 6 rows of the data frame
 names(sales2)
-sales3<- sales2[c(2:4,1,5:14)]
+sales3<- sales2[c(2:4,1:6)]
 
 
 names(sales3)
@@ -60,19 +60,35 @@ getOption("max.print")
 d1<- sales2$UNITS
 d1
 names(sales2)
-grep("Period",colnames(sales2))
+grep("eamil",colnames(sales2))
 names(sales2)
 
-sales2$totaltime<- sales2$Period + sales2$Data_value
+
+sales2$totaltime<- sales2$first_name + sales2$last_name
 View(sales2)
 View(sales2$totaltime)
 
 #getting the maximum period from data frame
 
 names(sales2)
-max_data<- max(sales2$Period)
+max_data<- max(sales2$email)
 print(max_data)
 
-detai<- subset(sales2, Period==max(Period))
-print(detai)
 
+
+
+detail<- subset(sales2, email==max(email))
+print(detail)
+
+#getting the data of a paricular person and its all information in a array
+names(sales2)
+details<- subset(sales2, first_name== "Arvy")
+print(details)
+
+names(sales2)
+details<- subset(sales2, first_name== "Arvy"&date =="10/20/2017")
+print(details)
+
+#writting into a csv file
+#R also allows us to write the .csv file
+#for this purpose provides a write.csv() function

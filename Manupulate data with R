@@ -1,0 +1,44 @@
+# R excell file
+
+getwd()
+#setwd----- custom directory
+setwd("C:\\Users\\Rahul\\Desktop\\R lang\\import csv")
+
+#installing xlsx package
+install.packages("xlsx")
+
+
+library("xlsx")
+#structure--read.xlsx(file_name,sheet_index)
+
+
+#reading the first worksheet in the file
+
+#options(java.parameters = "-Xmx8000m")
+
+excel_data<- read.xlsx("file_example_XLSX_5000.xlsx",sheetIndex = 1)
+print(excel_data)
+
+names(excel_data)
+dim(excel_data)
+summary(excel_data)
+max_age<- max(excel_data$Age)
+max_age
+min_age<- min(excel_data$Age)
+min_age
+
+a<- subset(excel_data, Country == "France")
+
+View(a)
+
+
+#write.xlsx()
+
+#Manupulate Data in R with dplyr package
+
+test<- read.csv("1000 Records.csv")
+View(test)
+
+
+
+

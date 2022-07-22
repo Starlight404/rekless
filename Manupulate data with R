@@ -22,6 +22,7 @@ print(excel_data)
 names(excel_data)
 dim(excel_data)
 summary(excel_data)
+
 max_age<- max(excel_data$Age)
 max_age
 min_age<- min(excel_data$Age)
@@ -38,7 +39,45 @@ View(a)
 
 test<- read.csv("1000 Records.csv")
 View(test)
+head(test)
+tail(test)
+summary(test)
+
+install.packages("dplyr")
+library("dplyr")
+
+#important dlpyr verbs to remember
+
+#select() ----    select coloumn
+#filter() -----   filter rows
+#arrange() ----- re-order or arrange rows
+#mutate() ------ create new coloumns
+#summarise() ---- summarise values
+
+#group by() ----- allows for group operations in the "split-layer-combine
+#concept
+
+names(test)
+
+salary<- select(test, First.Name, Salary)
+salary
+
+head(total_salary)
+#to select all the columns except a specific column,
+#use the "-" (subtraction) operator(also known as negative indexing)
+
+test1<- select(test, -City)
+head(select(test,-City))
+#To select a range of columns by Name, use the ":"(colon ) operator
+head(select(test, Emp.ID:Gender))
+
+#to select all columns that start with chracter string"s"
+head(select(test, starts_with("S")))
 
 
+#some additional to select based on a specific criteria
+
+
+head(select(test, ends_with("Name")))
 
 

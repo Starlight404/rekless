@@ -117,9 +117,10 @@ test %>% arrange(First.Name) %>%head
 #rows by the firstname, salary, gender=
 #finally show the head of the data frame
 
-test %>%
-  select(First.Name, Salary, Gender%>%
-  arrange( Salary, Gender) %>%
-  head
 
+test %>%
+  select(First.Name, Gender, Salary) %>%
+  arrange( First.Name,Gender, Salary) %>%
+  head
+         
          

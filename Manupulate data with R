@@ -62,7 +62,7 @@ names(test)
 salary<- select(test, First.Name, Salary)
 salary
 
-head(total_salary)
+head(salary)
 #to select all the columns except a specific column,
 #use the "-" (subtraction) operator(also known as negative indexing)
 
@@ -75,9 +75,51 @@ head(select(test, Emp.ID:Gender))
 head(select(test, starts_with("S")))
 
 
-#some additional to select based on a specific criteria
 
 
 head(select(test, ends_with("Name")))
 
+#some additional to select based on a specific criteria
 
+#ends with()
+#contains() select column that contain a character string
+#matches() select column that match a regular expression
+#one_of select column names that are from a group of names
+
+
+
+#selecting the rows using filter()
+
+names(test)
+
+filter(test, Salary  >=190579, Weight.in.Kgs.>42, Age.in.Yrs.> 24.44 )
+filter(test, Gender %in% c("F"))#if i have to filter the vectors
+
+#pipe operator : %>%
+#dplyr imports this operator from another package(magritr)
+#this operator allows to pipe the output from one function to 
+#the input of another function, instead of nesting functions 
+#(creating from the inside to the outside)
+#the idea of piping is to read the functions from left to right
+
+install.packages("magrittr")
+library(magrittr)
+head(select(test, First.Name, Gender))
+
+test %>% select(First.Name,Gender) %>% head
+
+#Arrange or re-rder rows using arrange()
+# to arrange rows by a particular column such as
+#the first name ,list the name of the column i want ot 
+#arrange the rows by
+test %>% arrange(First.Name) %>%head
+#we will select three columns from test, arrange the 
+#rows by the firstname, salary, gender=
+#finally show the head of the data frame
+
+test %>%
+  select(First.Name, Salary, Gender%>%
+  arrange( Salary, Gender) %>%
+  head
+
+         

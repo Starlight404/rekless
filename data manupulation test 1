@@ -105,3 +105,13 @@ test1 %>%
 mutate_test<- test1 %>% mutate(exp_value = Salary/Age.in.Yrs.) %>% head
 names(mutate_test)
 View(mutate_test)
+
+
+#groupby
+#the group by function is used to group data by one or more variable
+
+names(test1)
+t1<- group_by(test1, First.Name)
+View(t1)
+View(test1)
+test1 %>% group_by(First.Name)%>% head

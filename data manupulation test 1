@@ -1,0 +1,107 @@
+#create new coloumns using mutate()
+#the mutate function will add new columns to the data frame
+#create a new column called  exp_value which is the ratio of 
+#company in years and total salary
+
+# R excell file
+
+getwd()
+
+setwd("C:\\Users\\Rahul\\Desktop\\R lang\\import csv")
+
+library("xlsx")
+
+test1<- read.csv("1000 Records.csv")
+View(test1)
+head(test1)
+tail(test1)
+summary(test1)
+
+library("dplyr")
+
+#important dlpyr verbs to remember
+
+#select() ----    select coloumn
+#filter() -----   filter rows
+#arrange() ----- re-order or arrange rows
+#mutate() ------ create new coloumns
+#summarise() ---- summarise values
+
+#group by() ----- allows for group operations in the "split-layer-combine
+#concept
+
+names(test1)
+
+salary<- select(test1, First.Name, Salary)
+salary
+
+head(salary)
+#to select all the columns except a specific column,
+#use the "-" (subtraction) operator(also known as negative indexing)
+
+test2<- select(test1, -City)
+head(select(test1,-City))
+#To select a range of columns by Name, use the ":"(colon ) operator
+head(select(test1, Emp.ID:Gender))
+
+#to select all columns that start with chracter string"s"
+head(select(test1, starts_with("S")))
+
+
+
+
+head(select(test1, ends_with("Name")))
+
+#some additional to select based on a specific criteria
+
+#ends with()
+#contains() select column that contain a character string
+#matches() select column that match a regular expression
+#one_of select column names that are from a group of names
+
+
+
+#selecting the rows using filter()
+
+names(test1)
+
+filter(test1, Salary  >=190579, Weight.in.Kgs.>42, Age.in.Yrs.> 24.44 )
+filter(test1, Gender %in% c("F"))#if i have to filter the vectors
+
+#pipe operator : %>%
+#dplyr imports this operator from another package(magritr)
+#this operator allows to pipe the output from one function to 
+#the input of another function, instead of nesting functions 
+#(creating from the inside to the outside)
+#the idea of piping is to read the functions from left to right
+
+library(magrittr)
+
+head(select(test1, First.Name, Gender))
+
+test1 %>% select(First.Name,Gender) %>% head
+
+#Arrange or re-rder rows using arrange()
+# to arrange rows by a particular column such as
+#the first name ,list the name of the column i want ot 
+#arrange the rows by
+test1 %>% arrange(First.Name) %>%head
+#we will select three columns from test, arrange the 
+#rows by the firstname, salary, gender=
+#finally show the head of the data frame
+#pipe function allows us combine different functions
+
+
+test1 %>%
+  select(First.Name, Gender, Salary) %>%
+  arrange( First.Name,Gender, Salary) %>%
+  head
+
+test1 %>%
+  select(First.Name, Salary ,  Gender) %>%
+  arrange(First.Name, Gender, Salary) %>%
+  filter(Gender == "F")
+
+mutate_test<- test1 %>% mutate(exp_value = Salary/Age.in.Yrs.) %>% head
+names(mutate_test)
+View(mutate_test)

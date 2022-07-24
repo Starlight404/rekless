@@ -1,0 +1,16 @@
+#how to import R data in SQL database
+
+
+#using RmySQL pacakage
+
+#dbGetQuery : sends the queries and fetches  results as the data frame
+
+#dbsendQuery: only sends the query and returns an object of class
+#inheriting from "DBIresult", this object of class can be used to
+#fetch the required result
+
+#DbclearResult removes the result from cache memory
+#fetch returns few or all rows that were asked in query
+
+#DbHascompleted us used to check is all the rows are retrieved
+

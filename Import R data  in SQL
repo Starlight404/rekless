@@ -43,3 +43,13 @@ dbListTables(con)
 
 
 dbListFields(con, "form")
+
+data1<- dbGetQuery(con,"select * from form")
+View(data1)
+
+
+rs<-   dbSendQuery(con, "select * from form")
+rs
+
+data<- fetch(rs, n = 2)# HERE N shows the number of rows, -1 means all
+View(data)

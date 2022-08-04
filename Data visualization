@@ -5,3 +5,36 @@
 #of visualization techniques, a human can easily obtain information about 
 # hidden patterns in data that might be neglectated
 
+
+
+# R pie charts
+#pie chart is a representation of values in the form of slices
+#of a circle with different colors 
+#the pie chart are created with help of pie ()
+#which takes positive numbers as vector inputs
+
+
+#pie(x, label, radious, main,col,clockwise)
+#here
+
+# x is a vector that contains the numeric values used in the pie chart
+#labels are used to give description to the slices
+#radious describes the radious of the pie chart
+
+#main describes the title of the pie chart
+
+#color defines the color pallete
+
+#clockwiise is a logical vakues that indicates the clockwise or 
+#anti clockwise direction in which slices are drawn
+
+
+# creating the data for the graph
+
+x<- c(12,15,20,25,30,35)
+labels<- c("bangladesh", "india", "nepal", "china","russia","USA")
+pie(x,labels)
+pie(x, labels, main = "country pie chart", col = rainbow(length(x)))
+
+colors<- c("green","orange", "purple","white","red","blue")
+pie(x, labels, main = "country pie chart", col = colors)

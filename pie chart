@@ -1,0 +1,40 @@
+#pie chart
+
+
+
+
+
+slices<- c(15,20,30,84,14)
+names <- c("US","Canada","AUS","Russia","China")
+pct<- round(slices/sum(slices)*100)
+
+
+new_label<- paste(names,"-",pct, "%", sep = "" )
+
+pie(slices, labels = new_label, main = "country pie chart", col = rainbow(5))
+new_label
+
+library(plotrix)
+
+
+slices<- c(15,20,30,84,14)
+names <- c("US","Canada","AUS","Russia","China")
+pct<- round(slices/sum(slices)*100)
+
+
+new_label<- paste(names,"-",pct, "%", sep = "" )
+
+pie(slices, labels = new_label, main = "country pie chart", col = rainbow(5))
+new_label
+
+pie3D(slices, labels = new_label, main = "country pie chart", col = rainbow(5),explode = 0.2)
+
+
+
+
+
+
+
+
+
+

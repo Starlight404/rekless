@@ -27,8 +27,7 @@
 
 #clockwiise is a logical vakues that indicates the clockwise or 
 #anti clockwise direction in which slices are drawn
-
-
+getwd()
 # creating the data for the graph
 
 x<- c(12,15,20,25,30,35)
@@ -38,3 +37,26 @@ pie(x, labels, main = "country pie chart", col = rainbow(length(x)))
 
 colors<- c("green","orange", "purple","white","red","blue")
 pie(x, labels, main = "country pie chart", col = colors)
+
+
+#slice percentage and chart legend
+legend("topright", c("bangladesh", "india", "nepal", "china","russia","USA"), cex = 0.8,fill = colors)
+
+# 3 dimenstional pie chart
+
+
+# R provides a plotrix package whose pie3d() function is used to 
+#create an attractive 3d pie chart . The parameters of  pie3d()
+#function remain same as pie() function
+
+library(plotrix)
+x2<- c(20,65,55,79,10, 25)
+labels2<- c("bangladesh", "india", "nepal", "china","russia","USA")
+
+
+pie3D(x2,labels = labels2, main = "country pie chart",explode = 0.2,)
+
+pie_percentage<- round(100*x2/sum(x2),1)
+pie3D(x2, labels = pie_percentage,explode = 0.2, main = "country pie chart")
+legend("topright",  c("bangladesh", "india", "nepal", "china","russia","USA"), cex = 
+       0.2
